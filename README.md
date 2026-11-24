@@ -37,6 +37,7 @@ Contact: [steve@defendresolutions.com](mailto:steve@defendresolutions.com)
 ### Prerequisites
 
 - [Bun](https://bun.sh/) (CI uses `bun install --frozen-lockfile`)
+- [Node.js](https://nodejs.org/) 22.9 or newer (`bun run migrate` runs `tsx --env-file-if-exists`)
 - A Postgres database if you want `migrate` and PDF import to persist rows
 - A Supabase project if you want login and signup
 
