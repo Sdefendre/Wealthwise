@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WealthWise. Money dashboard you run locally</title>
+  <meta name="description" content="WealthWise is a Next.js money dashboard. Import a CSV or PDF statement, see charts, or start from sample data. A Defendre Solutions prototype by Steve Defendre. No Plaid. No live bank login.">
+  <meta name="theme-color" content="#050510">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="WealthWise. Money dashboard you run locally">
+  <meta property="og:description" content="CSV and PDF statement import, charts, and sample data. No Plaid. No live bank login.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sdefendre.github.io/Wealthwise/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header class="nav">
+      <div class="brand">
+        <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+          <rect x="7" y="10" width="18" height="13" rx="3" fill="none" stroke="#4a90f7" stroke-width="1.4"/>
+          <path d="M7 14.5h18" stroke="#2383e2" stroke-width="1.2"/>
+          <circle cx="22" cy="18.5" r="1.6" fill="#a855f7"/>
+          <path d="M10 22l3.2-3.4 2.6 1.6L20 16" fill="none" stroke="#f97316" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="wordmark">WEALTHWISE</span>
+        <span class="badge">Prototype</span>
+      </div>
+      <nav class="nav-links">
+        <span>Defendre Solutions</span>
+        <a href="https://github.com/Sdefendre/Wealthwise">GitHub</a>
+      </nav>
+    </header>
+
+    <section class="hero" id="overview">
+      <div class="eyebrow"><span></span> PRIVATE BY DESIGN</div>
+      <h1>WealthWise</h1>
+      <p>Next.js money dashboard. Import a CSV or PDF statement, chart it, or load the bundled sample. You run the app. No Plaid. No live bank login.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/Sdefendre/Wealthwise">View on GitHub</a>
+        <a class="btn btn-ghost" href="#run">Clone and run</a>
+      </div>
+    </section>
+
+    <section class="principles" aria-label="WealthWise principles">
+      <div><strong>01</strong><span><b>Your files</b>Import from your computer, then keep control of the data.</span></div>
+      <div><strong>02</strong><span><b>Clear samples</b>Every preview number is labeled as demo data.</span></div>
+      <div><strong>03</strong><span><b>Built to inspect</b>Open-source code and a straightforward local setup.</span></div>
+    </section>
+
+    <section class="app" aria-label="WealthWise dashboard preview">
+      <div class="chrome">
+        <div class="dots" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="chrome-title">WealthWise. Sample statement</div>
+      </div>
+
+      <div class="workspace">
+        <aside class="panel files-panel">
+          <div class="panel-head">PAGES</div>
+          <div class="nav-list">
+            <div class="nav-item active"><span class="dot" style="background:#4a90f7"></span>Dashboard</div>
+            <div class="nav-item"><span class="dot" style="background:#a855f7"></span>Transactions</div>
+            <div class="nav-item"><span class="dot" style="background:#f97316"></span>Analytics</div>
+          </div>
+          <div class="aside-note">
+            Numbers below are the app’s bundled sample CSV. They are not a live balance and not a connected bank.
+          </div>
+        </aside>
+
+        <section class="panel dash">
+          <div class="panel-head"><span>DASHBOARD</span><span>Sample data</span></div>
+          <div class="kpis">
+            <div class="kpi">
+              <div class="label">INCOME</div>
+              <div class="value">$5,200</div>
+              <div class="hint">Sample CSV salary row</div>
+            </div>
+            <div class="kpi">
+              <div class="label">EXPENSES</div>
+              <div class="value">$3,477.74</div>
+              <div class="hint">Sum of sample outflows</div>
+            </div>
+            <div class="kpi">
+              <div class="label">NET</div>
+              <div class="value">$1,722.26</div>
+              <div class="hint">Same six sample rows</div>
+            </div>
+          </div>
+          <div class="chart-wrap">
+            <svg viewBox="0 0 640 220" role="img" aria-label="Sample cashflow chart">
+              <text class="chart-label" x="16" y="22">Cashflow · sample month</text>
+              <polyline
+                fill="none"
+                stroke="#4a90f7"
+                stroke-width="2.2"
+                points="40,150 120,70 200,128 280,96 360,142 440,88 520,118 600,64"
+              />
+              <polyline
+                fill="none"
+                stroke="#f97316"
+                stroke-width="2"
+                stroke-dasharray="4 4"
+                points="40,168 120,160 200,148 280,154 360,140 440,146 520,138 600,132"
+              />
+              <circle cx="600" cy="64" r="3.5" fill="#4a90f7"/>
+            </svg>
+          </div>
+        </section>
+
+        <aside class="panel feed">
+          <div class="panel-head"><span>ACTIVITY</span><span>CSV</span></div>
+          <div class="tx">
+            <div>
+              <div class="who">Monthly Salary</div>
+              <div class="cat">Income · Checking</div>
+            </div>
+            <div class="amt in">+5200</div>
+          </div>
+          <div class="tx">
+            <div>
+              <div class="who">Rent Payment</div>
+              <div class="cat">Housing · Checking</div>
+            </div>
+            <div class="amt out">-2100</div>
+          </div>
+          <div class="tx">
+            <div>
+              <div class="who">Brokerage Contribution</div>
+              <div class="cat">Investments</div>
+            </div>
+            <div class="amt out">-600</div>
+          </div>
+          <div class="tx">
+            <div>
+              <div class="who">Whole Foods</div>
+              <div class="cat">Groceries</div>
+            </div>
+            <div class="amt out">-185.24</div>
+          </div>
+          <div class="tx">
+            <div>
+              <div class="who">Automatic Savings</div>
+              <div class="cat">Savings</div>
+            </div>
+            <div class="amt out">-500</div>
+          </div>
+          <div class="tx">
+            <div>
+              <div class="who">Dinner with Friends</div>
+              <div class="cat">Dining</div>
+            </div>
+            <div class="amt out">-92.50</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <article class="card">
+        <div class="kicker">IMPORT</div>
+        <h2>CSV or PDF statements</h2>
+        <p>Drop a bank CSV on the dashboard. PDF statements go through an optional Mistral OCR route when you set an API key. There is no Plaid hookup and no live bank login.</p>
+      </article>
+      <article class="card">
+        <div class="kicker">CHARTS</div>
+        <h2>What the rows add up to</h2>
+        <p>Income, expenses, cashflow, and category breakdowns from the transactions you imported or from the sample file. Recharts on a Next.js App Router dashboard.</p>
+      </article>
+      <article class="card">
+        <div class="kicker">SAMPLE DATA</div>
+        <h2>A starter statement</h2>
+        <p>The dashboard boots with a small sample CSV you can also download. Those figures are demo rows, not a connected account and not a claimed balance.</p>
+      </article>
+      <article class="card">
+        <div class="kicker">AUTH</div>
+        <h2>Supabase email login</h2>
+        <p>Login and signup pages are in the app. They need your own Supabase project. Protected routes redirect to login when there is no session.</p>
+      </article>
+    </section>
+
+    <section class="run" id="run">
+      <div>
+        <h2>Clone it. Run it.</h2>
+        <p>Working prototype. Next.js 14, TypeScript, Tailwind, Drizzle, Supabase. MIT license. Bun for install and scripts. Copy <code>.env.example</code> before you start. You need a Postgres URL for migrate, and Supabase keys for login.</p>
+      </div>
+      <div class="term">
+        <button class="copy" type="button" data-copy>Copy</button>
+        <pre id="clone">git clone https://github.com/Sdefendre/Wealthwise.git
+cd Wealthwise
+bun install
+bun run dev</pre>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div>MIT · Defendre Solutions · Steve Defendre · <a href="mailto:steve@defendresolutions.com">steve@defendresolutions.com</a></div>
+      <a href="https://github.com/Sdefendre/Wealthwise">github.com/Sdefendre/Wealthwise</a>
+    </footer>
+  </div>
+
+  <script>
+    const button = document.querySelector("[data-copy]");
+    const source = document.getElementById("clone");
+    if (button && source) {
+      button.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(source.textContent);
+          button.textContent = "Copied";
+          setTimeout(() => { button.textContent = "Copy"; }, 1400);
+        } catch {
+          button.textContent = "Copy failed";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
